@@ -81,7 +81,11 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
+button {
+    border-radius: 5px;
+}
+
 footer {
     position: fixed;
     width: 100%;
@@ -92,22 +96,38 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
+
+@keyframes pulse {
+20% {
+    transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
+}
+
+40% {
+    transform: rotate3d(10, 10, -10, 50deg) scale(1);
+}
+
+60% {
+    transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
     }
 
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
+80% {
+    transform: rotate3d(10, 10, 10, 50deg) scale(1);
+}
 
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
+}
 
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
+.cup-images {
+    display: flex;
+}
 
-  }
+.cups {
+    height: 200px;
+}
+
+.cup-choose {
+    margin: 7px auto;
+    
+    display: flex;
+    width: 450px;
+    justify-content: space-between;
+}
